@@ -4,6 +4,7 @@ import { parse, TYPE, type MessageFormatElement } from "@formatjs/icu-messagefor
 import enUS from "./locales/en-US";
 import esES from "./locales/es-ES";
 import ptBR from "./locales/pt-BR";
+import zhCN from "./locales/zh-CN";
 import { SUPPORTED_LOCALES } from "./types";
 import type { LocaleMessages, SupportedLocale } from "./types";
 
@@ -13,6 +14,7 @@ const messages: Record<SupportedLocale, LocaleMessages> = {
   "en-US": enUS,
   "es-ES": esES,
   "pt-BR": ptBR,
+  "zh-CN": zhCN,
 };
 
 const baseKeys = Object.keys(messages[BASE_LOCALE]);

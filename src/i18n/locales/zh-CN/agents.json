@@ -1,0 +1,9 @@
+{
+  "agents.title": "智能体",
+  "agents.loading": "正在加载智能体，请稍候...",
+  "agents.error.loading": "加载智能体时出错",
+  "agents.card.status.active": "活跃",
+  "agents.card.status.inactive": "未活跃",
+  "agents.empty.title": "暂无智能体",
+  "agents.empty.description": "智能体注册到服务器后将显示在此处。"
+}

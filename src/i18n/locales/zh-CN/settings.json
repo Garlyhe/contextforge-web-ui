@@ -1,0 +1,12 @@
+{
+  "settings.title": "设置",
+  "settings.tabs.apiTokens": "API 令牌",
+  "settings.tabs.users": "用户",
+  "settings.tabs.teams": "团队",
+  "settings.tabs.sso": "SSO",
+  "settings.sso.statusLabel": "状态",
+  "settings.sso.statusEnabled": "已启用",
+  "settings.sso.statusDisabled": "已禁用",
+  "settings.sso.providerLabel": "提供商",
+  "settings.sso.hint": "SSO 通过服务器上的环境变量配置。此页面为只读。"
+}

@@ -7,11 +7,13 @@ import { SUPPORTED_LOCALES } from "./types";
 import enUS from "./locales/en-US";
 import ptBR from "./locales/pt-BR";
 import esES from "./locales/es-ES";
+import zhCN from "./locales/zh-CN";
 
 const messages: Record<SupportedLocale, Record<string, string>> = {
   "en-US": enUS,
   "pt-BR": ptBR,
   "es-ES": esES,
+  "zh-CN": zhCN,
 };
 
 interface I18nContextValue {

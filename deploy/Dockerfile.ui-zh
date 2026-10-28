@@ -1,0 +1,23 @@
+# 简体中文 overlay 镜像：基于官方镜像，只替换 SPA 静态资源 public/
+#
+# 上游镜像里没有源码，只有编译产物：
+#   /opt/app-root/src/dist/        BFF（Fastify）编译产物
+#   /opt/app-root/src/public/      SPA 静态资源（index.html + assets/）
+# 因此汉化只需把本仓库 `npm run build` 产出的 server/public 覆盖进去。
+#
+# 用法（构建上下文需包含 public/）：
+#   cp -r server/public build/public && cp deploy/Dockerfile.ui-zh build/Dockerfile
+#   docker build --pull=false -f build/Dockerfile -t contextforge-web-ui:0.2.4-zh-CN build/
+#
+# 注意：
+#   1) COPY 是目录合并语义，必须先 rm -rf 旧 public/，否则新旧 bundle 并存（旧 index-*.js 残留）
+#   2) Windows 上复制过来的文件可能带执行位，需 chmod 收敛为 644/755
+
+FROM ghcr.io/contextforge-org/contextforge-web-ui:0.2.4
+
+RUN rm -rf /opt/app-root/src/public
+COPY --chown=1001:0 public /opt/app-root/src/public
+RUN find /opt/app-root/src/public -type f -exec chmod 644 {} + \
+ && find /opt/app-root/src/public -type d -exec chmod 755 {} +
+
+USER 1001
