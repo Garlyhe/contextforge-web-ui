@@ -1,5 +1,7 @@
 # ContextForge Web UI
 
+> **简体中文汉化版**：本仓库基于上游 `v0.2.4` 增加了 `zh-CN` 语言包（18 个 bundle / 1545 条译文），详见 [LOCALIZATION.zh-CN.md](LOCALIZATION.zh-CN.md)。
+
 The web interface for ContextForge, the open source AI gateway that federates
 tools, agents, and APIs into one endpoint.
 
